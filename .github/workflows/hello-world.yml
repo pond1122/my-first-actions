@@ -2,11 +2,6 @@ name: wirawat 029 - CI/CD Workflow
 
 on:
   push:
-  HEAD
-    branches:
-      - main
-
-=======
     branches: [ "main", "master" ]
 
 permissions:
@@ -18,14 +13,13 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-  ca0eb4f (add website)
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-  HEAD
       - name: Say Hello
         run: echo 'Hello GitHub action'
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -36,4 +30,3 @@ jobs:
 
       - name: Deploy Pages Actual
         uses: actions/deploy-pages@v4
-        ca0eb4f (add website)
